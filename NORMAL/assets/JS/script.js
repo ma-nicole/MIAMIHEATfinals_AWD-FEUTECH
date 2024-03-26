@@ -8,16 +8,24 @@ window.onload = function() {
 }
 
 function setGame() {
-    //set up the grid in html
-    for (let i = 0; i < 9; i++) { //i goes from 0 to 8, stops at 9
-        //<div id="0-8"></div>
-        let tile = document.createElement("div");
+    const board = document.getElementById("board");
+    const boardWidth = board.clientWidth; // Get the width of the board
+
+    // Set up the grid in HTML
+    for (let i = 0; i < 9; i++) {
+        const tile = document.createElement("div");
         tile.id = i.toString();
         tile.addEventListener("click", selectTile);
-        document.getElementById("board").appendChild(tile);
+
+        // Calculate the width of each tile as a percentage of the board's width
+        const tileWidthPercentage = 100 / 3; // Divide the board into 3 equal parts
+        tile.style.width = `${tileWidthPercentage}%`;
+
+        board.appendChild(tile);
     }
-    setInterval(setMole, 1000); // 1000 miliseconds = 1 second, every 1 second call setMole
-    setInterval(setPlant, 2000); // 2000 miliseconds = 2 seconds, every 2 second call setPlant
+
+    setInterval(setMole, 900);
+    setInterval(setPlant, 1200);
 }
 
 function getRandomTile() {
