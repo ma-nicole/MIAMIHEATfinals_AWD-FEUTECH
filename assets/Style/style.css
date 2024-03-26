@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url("https://i.pinimg.com/originals/70/56/c5/7056c57d97a035af946d8f17cddf16a6.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    height: 100%;
+}
+.logocon{
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    min-height: 10vh;
+    padding: 15px;
+}
+.logocon img{
+    min-height: 10vh;
+    width: 80%;
+}
