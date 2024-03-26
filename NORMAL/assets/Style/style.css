@@ -23,33 +23,36 @@ body {
 .logocon img{
     width: 200px;
 }
-#board {
-    width: 540px;
-    height: 540px;
-    /* background-color: green; */
 
+
+#board {
+    width: 100%; 
+    max-width: 540px; 
+    max-height: 540px; 
+    height: auto; 
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-
     background-color: transparent;
     background-size: cover;
-    border-radius: 25px;
 }
 
 #board div {
-    /* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
     width: 180px; 
-    height: 180px;
-    background-image: url("assets/ufo.png");
-    background-size: cover;
+    height: 20vh;
+    background-image: url("ufo.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: bottom;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
 }
 
 #board div img {
-    /* all img tags inside tiles */
-    width: 100px;
-    height: 100px;
-
+    width: 70%;
+    height: 50%;
+    margin-top: 30px;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
