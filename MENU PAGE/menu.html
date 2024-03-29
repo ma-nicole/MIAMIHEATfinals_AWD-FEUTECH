@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MENU PAGE</title>
+    <title>Menu Page</title>
     <link href="assets/Style/style.css" rel="stylesheet">
 </head>
 <body>
-<div class="logocon">
-        <img src="assets/logo.png" alt="Descriptive text of the image">
+<div class="background">
+    <img src="assets/logo.png" alt="Whack an Alien Logo" class="background-image">
+</div>
+<div class="menu-container">
+    <div id="playerNameDisplay" class="player-name">Player Name: Loading...</div>
+
+    <div class="difficulty-buttons">
+        <div class="button-wrapper">
+            <a href="/EASY/easy.html"><button class="btn">Easy</button></a>
         </div>
-    
-    
+        <div class="button-wrapper">
+            <a href="/NORMAL/normal.html"><button class="btn">Normal</button></a>
+        </div>
+        <div class="button-wrapper">
+            <a href="/HARD/hard.html"><button class="btn">Hard</button></a>
+        </div>
+    </div>
+</div>
+
 <script src="assets/JS/script.js"></script>
 </body>
-
 </html>
