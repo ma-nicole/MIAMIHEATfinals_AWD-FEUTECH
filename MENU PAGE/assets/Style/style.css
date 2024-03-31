@@ -221,7 +221,10 @@ body {
   background-image: conic-gradient(#4090b5, transparent, transparent, transparent, transparent, transparent, transparent, transparent, #4090b5);
   animation: rotate 4s linear infinite;
 }
-
+.btn-back {
+    padding: 7px 20px;
+    margin-left: 20px;
+}
 @keyframes rotate {
   0% {
       transform: rotate(0deg);
