@@ -23,11 +23,28 @@ body {
 .logocon img{
     width: 200px;
 }
+
+/* to add */
+.score{  
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    height: 30px;
+    font-family: Impact, fantasy;
+}
+/* to add */
+#scoreLabel{
+    font-size: 25px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
 #board {
-    width: 100%;
+    width: 100%; 
     max-width: 540px; 
     max-height: 540px; 
-    height: auto;
+    height: auto; 
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -36,22 +53,21 @@ body {
 }
 
 #board div {
-    width: 270px; 
-    height: 22vh; 
-    background-image: url("./ufo.png");
-    margin-bottom: 40px;
+    width: 180px; 
+    height: 20vh;
+    background-image: url("ufo.png");
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: bottom;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: center; 
+    align-items: flex-start; 
 }
 
 #board div img {
-    width: 45%;
-    height: 54%;
-    
+    width: 70%;
+    height: 50%;
+    margin-top: 30px;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -59,29 +75,22 @@ body {
     -ms-user-select: none;
 }
 
-#score {
-    color: rgb(142, 142, 142);
+.restart-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    #board {
-        width: 90%;
-        max-width: 400px;
-        max-height: 400px;
-        margin: auto; 
-    }
-    #board div {
-        width: 50%; 
-        height: 20vh; 
-        float: left; 
-        position: relative; 
-        padding-bottom: 10%; 
-    }
+#restartGame {
+    padding: 7px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #309837;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
 
-    #board div img {
-        width: 45%; 
-        height: 54%; 
-        margin: auto; 
-        display: block; 
-    }
+#restartGame:hover {
+    background-color: #357c26;
 }

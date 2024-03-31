@@ -2,6 +2,10 @@ let currAlienTile;
 let currBombTile;
 let score = 0;
 let gameOver = false;
+const numRows = 3; 
+const numCols = 3; 
+const numTiles = numRows * numCols; // Total number of tiles in the grid
+const alienInterval = 900; // Interval for alien appearance (milliseconds)
 
 window.onload = function() {
     setGame();
@@ -12,25 +16,24 @@ function setGame() {
     const boardWidth = board.clientWidth; // Get the width of the board
 
     // Set up the grid in HTML
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < numTiles; i++) {
         const tile = document.createElement("div");
         tile.id = i.toString();
         tile.addEventListener("click", selectTile);
 
         // Calculate the width of each tile as a percentage of the board's width
-        const tileWidthPercentage = 100 / 3; // Divide the board into 3 equal parts
+        const tileWidthPercentage = 100 / numCols; // Divide the board into equal parts
         tile.style.width = `${tileWidthPercentage}%`;
 
         board.appendChild(tile);
     }
 
-    setInterval(setAlien, 900);
+    setInterval(setAlien, alienInterval);
     setInterval(setBomb, 1200);
 }
 
 function getRandomTile() {
-    //math.random --> 0-1 --> (0-1) * 9 = (0-9) --> round down to (0-8) integers
-    let num = Math.floor(Math.random() * 9);
+    let num = Math.floor(Math.random() * numTiles);
     return num.toString();
 }
 
@@ -95,17 +98,15 @@ function restartGame() {
     }
 
     if (currAlienTile) {
-        currAlienTile.innerHTML = ""; // Clear the current mole tile
+        currAlienTile.innerHTML = ""; // Clear the current alien tile
     }
 
     if (currBombTile) {
-        currBombTile.innerHTML = ""; // Clear the current plant tile
+        currBombTile.innerHTML = ""; // Clear the current bomb tile
     }
 
     score = 0; // Reset score
     document.getElementById("score").innerText = "0"; // Update score display
-
-
 }
 
 function createScoreLabel() {
