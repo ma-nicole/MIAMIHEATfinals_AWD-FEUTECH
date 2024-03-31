@@ -9,7 +9,7 @@ window.onload = function() {
 
 function setGame() {
     const board = document.getElementById("board");
-    const boardWidth = board.clientWidth; // Get the width of the board
+    const boardWidth = board.clientWidth; 
 
     // Set up the grid in HTML
     for (let i = 0; i < 9; i++) {
@@ -17,8 +17,8 @@ function setGame() {
         tile.id = i.toString();
         tile.addEventListener("click", selectTile);
 
-        // Calculate the width of each tile as a percentage of the board's width
-        const tileWidthPercentage = 100 / 3; // Divide the board into 3 equal parts
+        
+        const tileWidthPercentage = 100 / 3;
         tile.style.width = `${tileWidthPercentage}%`;
 
         board.appendChild(tile);
@@ -29,7 +29,6 @@ function setGame() {
 }
 
 function getRandomTile() {
-    //math.random --> 0-1 --> (0-1) * 9 = (0-9) --> round down to (0-8) integers
     let num = Math.floor(Math.random() * 9);
     return num.toString();
 }
@@ -76,50 +75,50 @@ function selectTile() {
     }
     if (this == currAlienTile) {
         score += 5;
-        document.getElementById("score").innerText = score.toString(); //update score html
+        document.getElementById("score").innerText = score.toString(); 
     }
     else if (this == currBombTile) {
         document.getElementById("score").innerText = "GAME OVER: " + score.toString();
         gameOver = true;
-        removeScoreLabel(); // Call a function to remove the <p> element
+        removeScoreLabel(); 
     }
 }
 
 document.getElementById("restartGame").addEventListener("click", restartGame);
 
 function restartGame() {
-    gameOver = false; // Reset the gameOver flag
+    gameOver = false; 
 
     if (!document.getElementById('scoreLabel')) {
         createScoreLabel();
     }
 
     if (currAlienTile) {
-        currAlienTile.innerHTML = ""; // Clear the current mole tile
+        currAlienTile.innerHTML = "";
     }
 
     if (currBombTile) {
-        currBombTile.innerHTML = ""; // Clear the current plant tile
+        currBombTile.innerHTML = "";
     }
 
     score = 0; // Reset score
-    document.getElementById("score").innerText = "0"; // Update score display
+    document.getElementById("score").innerText = "0"; 
 
 
 }
 
 function createScoreLabel() {
-    const scoreContainer = document.querySelector('.score'); // Adjust if necessary
+    const scoreContainer = document.querySelector('.score'); 
     const scoreLabel = document.createElement('p');
     scoreLabel.id = 'scoreLabel';
     scoreLabel.textContent = 'SCORE:';
-    scoreContainer.prepend(scoreLabel); // Adds the new <p> at the beginning of the .score div
+    scoreContainer.prepend(scoreLabel); 
 }
 
 function removeScoreLabel() {
     let scoreLabel = document.getElementById("scoreLabel");
     if (scoreLabel) {
-        scoreLabel.remove(); // Removes the <p> element
+        scoreLabel.remove(); 
     }
 }
 
