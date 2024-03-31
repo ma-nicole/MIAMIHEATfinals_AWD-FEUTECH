@@ -24,6 +24,21 @@ body {
     width: 200px;
 }
 
+/* to add */
+.score{  
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    height: 30px;
+    font-family: Impact, fantasy;
+}
+/* to add */
+#scoreLabel{
+    font-size: 25px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
 
 #board {
     width: 100%; 
@@ -58,4 +73,24 @@ body {
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+.restart-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#restartGame {
+    padding: 7px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #309837;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#restartGame:hover {
+    background-color: #357c26;
 }
