@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url("https://i.pinimg.com/originals/70/56/c5/7056c57d97a035af946d8f17cddf16a6.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    min-height: 100vh;
+}
+.logocon{
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    padding: 15px;
+    width: 100%;
+}
+.logocon img{
+    width: 200px;
+}
+
+/* to add */
+.score{  
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    height: 30px;
+    font-family: Impact, fantasy;
+}
+/* to add */
+#scoreLabel{
+    font-size: 25px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+#board {
+    width: 100%; 
+    max-width: 540px; 
+    max-height: 540px; 
+    height: auto; 
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+    background-size: cover;
+}
+
+#board div {
+    width: 180px; 
+    height: 20vh;
+    background-image: url("ufo.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: bottom;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+}
+
+#board div img {
+    width: 70%;
+    height: 50%;
+    margin-top: 30px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.restart-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#restartGame {
+    padding: 7px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #309837;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#restartGame:hover {
+    background-color: #357c26;
+}
+
+.btn-back {
+    padding: 7px 20px;
+    margin-left: 20px;
+}
