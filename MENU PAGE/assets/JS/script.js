@@ -5,3 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
         playerNameDisplay.textContent = playerName ? 'Hi, ' + playerName : 'Hi, Player Name...';
     }
 });
+function goBack() {
+    window.history.back();
+}
