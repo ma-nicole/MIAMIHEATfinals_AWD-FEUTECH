@@ -21,7 +21,7 @@ body {
     padding: 15px;
 }
 .logocon img{
-    width: 50%;
+    width: 60%;
 }
 
 .player-name {
@@ -104,11 +104,6 @@ body {
 
 .btn:where(:hover, :focus) {
   color: #fff;
-}
-
-.background {
-    position: relative;
-    text-align: center; /* Center the content */
 }
 
 .button-wrapper {
