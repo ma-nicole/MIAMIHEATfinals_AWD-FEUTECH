@@ -135,7 +135,7 @@ body {
     font-family: 'Segoe UI', sans-serif; /* Font family for clean look */
     color: #ffffff; /* Light blue color for the text */
     text-align: center; /* Center the text inside the player name */
-    margin-top: 250px ; /* Margin to space out from other elements */
+    margin-top: 60px ; /* Margin to space out from other elements */
     border-radius: 5px; /* Optional: if you want rounded corners */
     display: inline-block; /* Inline-block for proper centering */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Shadow for a pop-out effect */
