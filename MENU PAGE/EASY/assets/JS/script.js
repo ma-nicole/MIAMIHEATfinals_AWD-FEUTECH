@@ -1,5 +1,5 @@
-let currMoleTile;
-let currPlantTile;
+let currAlienTile;
+let currBombTile;
 let score = 0;
 let gameOver = false;
 
@@ -14,8 +14,8 @@ function setGame() {
         tile.addEventListener("click", selectTile);
         document.getElementById("board").appendChild(tile);
     }
-    setInterval(setMole, 890);
-    setInterval(setPlant, 1190);
+    setInterval(setAlien, 890);
+    setInterval(setBomb, 1190);
 }
 
 function getRandomTile() {
@@ -23,52 +23,95 @@ function getRandomTile() {
     return num.toString();
 }
 
-function setMole() {
+function setAlien() {
     if (gameOver) {
         return;
     }
-    if (currMoleTile) {
-        currMoleTile.innerHTML = "";
+    if (currAlienTile) {
+        currAlienTile.innerHTML = "";
     }
-    let mole = document.createElement("img");
-    mole.src = "assets/alien.png";
+    let alien = document.createElement("img");
+    alien.src = "assets/alien.png";
 
     let num = getRandomTile();
-    if (currPlantTile && currPlantTile.id == num) {
+    if (currBombTile && currBombTile.id == num) {
         return;
     }
-    currMoleTile = document.getElementById(num);
-    currMoleTile.appendChild(mole);
+    currAlienTile = document.getElementById(num);
+    currAlienTile.appendChild(alien);
 }
 
-function setPlant() {
+function setBomb() {
     if (gameOver) {
         return;
     }
-    if (currPlantTile) {
-        currPlantTile.innerHTML = "";
+    if (currBombTile) {
+        currBombTile.innerHTML = "";
     }
-    let plant = document.createElement("img");
-    plant.src = "assets/bomb.png";
+    let bomb = document.createElement("img");
+    bomb.src = "assets/bomb.png";
 
     let num = getRandomTile();
-    if (currMoleTile && currMoleTile.id == num) {
+    if (currAlienTile && currAlienTile.id == num) {
         return;
     }
-    currPlantTile = document.getElementById(num);
-    currPlantTile.appendChild(plant);
+    currBombTile = document.getElementById(num);
+    currBombTile.appendChild(bomb);
 }
 
 function selectTile() {
     if (gameOver) {
         return;
     }
-    if (this == currMoleTile) {
-        score += 10;
-        document.getElementById("score").innerText = score.toString();
+    if (this == currAlienTile) {
+        score += 5;
+        document.getElementById("score").innerText = score.toString(); 
     }
-    else if (this == currPlantTile) {
+    else if (this == currBombTile) {
         document.getElementById("score").innerText = "GAME OVER: " + score.toString();
         gameOver = true;
+        removeScoreLabel(); 
     }
+}
+
+document.getElementById("restartGame").addEventListener("click", restartGame);
+
+function restartGame() {
+    gameOver = false; 
+
+    if (!document.getElementById('scoreLabel')) {
+        createScoreLabel();
+    }
+
+    if (currAlienTile) {
+        currAlienTile.innerHTML = ""; 
+    }
+
+    if (currBombTile) {
+        currBombTile.innerHTML = ""; 
+    }
+
+    score = 0; // Reset score
+    document.getElementById("score").innerText = "0"; 
+
+
+}
+
+function createScoreLabel() {
+    const scoreContainer = document.querySelector('.score'); 
+    const scoreLabel = document.createElement('p');
+    scoreLabel.id = 'scoreLabel';
+    scoreLabel.textContent = 'SCORE:';
+    scoreContainer.prepend(scoreLabel);
+}
+
+function removeScoreLabel() {
+    let scoreLabel = document.getElementById("scoreLabel");
+    if (scoreLabel) {
+        scoreLabel.remove(); 
+    }
+}
+
+function goBack() {
+    window.history.back();
 }
