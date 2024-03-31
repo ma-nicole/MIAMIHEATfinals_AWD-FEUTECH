@@ -13,7 +13,7 @@ body {
 }
 
 .logo img {
-    width: 300px; /* Adjust width as needed */
+    width: 300px;
     height: auto;
     margin-bottom: 20px;
 }
@@ -95,7 +95,7 @@ button:where(:hover, :focus) {
 }
   
 .button-container {
-      margin: 20px 0; /* Adjust the spacing between buttons */
+      margin: 20px 0;
       display: flex;
       justify-content: center;
   }
@@ -113,8 +113,7 @@ input[type="text"]:focus {
     border-color: #800080;
 }
 
-/* Responsive Styles */
-@media (max-width: 767px) { /* Phones */
+@media (max-width: 767px) {
     .logo img {
         width: 200px;
     }
@@ -124,7 +123,7 @@ input[type="text"]:focus {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) { /* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
     .logo img {
         width: 250px;
     }
@@ -134,7 +133,7 @@ input[type="text"]:focus {
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1279px) { /* Laptops */
+@media (min-width: 1024px) and (max-width: 1279px) {
     .container {
         margin-top: 50px;
     }
@@ -148,7 +147,7 @@ input[type="text"]:focus {
     }
 }
 
-@media (min-width: 1280px) { /* PCs */
+@media (min-width: 1280px) {
     .container {
         margin-top: 50px;
     }
