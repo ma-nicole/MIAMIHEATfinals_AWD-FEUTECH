@@ -27,11 +27,10 @@ body {
 .player-name {
   font-size: 20px;
   margin-bottom: 20px;
-  /* Feel free to add more styling */
 }
 
 .player-name-display {
-  margin-top: 250px; /* Adjust this value to move the form down */
+  margin-top: 250px; 
 }
 
 .btn {
@@ -112,19 +111,19 @@ body {
 
 .background {
   position: relative;
-  text-align: center; /* Center the content */
+  text-align: center; 
 }
 
 .button-wrapper {
-  margin: 20px 0; /* Adjust the spacing between buttons */
+  margin: 20px 0; 
   display: flex;
   justify-content: center;
 }
 
 .background-image {
-  width: 100%; /* You may adjust this as per your layout needs */
+  width: 100%; 
   height: auto;
-  display: block; /* Removes extra space below the image */
+  display: block; 
 }
 
 .menu-container {
@@ -132,7 +131,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center; /* Center-align the inner content */
+  text-align: center; 
 }
 
 .container {
