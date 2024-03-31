@@ -23,6 +23,22 @@ body {
 .logocon img{
     width: 200px;
 }
+
+.score{  
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    height: 30px;
+    font-family: Impact, fantasy;
+}
+
+#scoreLabel{
+    font-size: 25px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
 #board {
     width: 100%;
     max-width: 540px; 
@@ -59,9 +75,6 @@ body {
     -ms-user-select: none;
 }
 
-#score {
-    color: rgb(142, 142, 142);
-}
 
 @media (max-width: 768px) {
     #board {
