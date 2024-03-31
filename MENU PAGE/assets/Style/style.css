@@ -222,8 +222,7 @@ body {
   animation: rotate 4s linear infinite;
 }
 .btn-back {
-    padding: 7px 20px;
-    margin-left: 20px;
+  padding: 7px 20px;
 }
 @keyframes rotate {
   0% {
