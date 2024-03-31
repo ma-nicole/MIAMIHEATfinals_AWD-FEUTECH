@@ -75,6 +75,30 @@ body {
     -ms-user-select: none;
 }
 
+.restart-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#restartGame {
+    padding: 7px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #309837;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#restartGame:hover {
+    background-color: #357c26;
+}
+
+.btn-back {
+    padding: 7px 20px;
+    margin-left: 20px;
+}
 
 @media (max-width: 768px) {
     #board {
