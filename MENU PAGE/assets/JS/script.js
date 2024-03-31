@@ -3,6 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var playerNameDisplay = document.getElementById('playerNameDisplay');
     if (playerNameDisplay) {
         var playerName = sessionStorage.getItem('playerName');
-        playerNameDisplay.textContent = playerName ? 'Player Name: ' + playerName : 'Player Name not set';
+         playerNameDisplay.textContent = playerName ? 'WELCOME PLAYER ' + playerName : 'Player Name not set';
     }
 });
