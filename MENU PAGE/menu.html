@@ -7,11 +7,19 @@
     <link href="assets/Style/style.css" rel="stylesheet">
 </head>
 <body>
-<div class="logocon">
+<div class="background">
     <img src="assets/logo.png" alt="Whack an Alien Logo" class="background-image">
 </div>
 <div class="menu-container">
-    <div id="playerNameDisplay" class="player-name">Player Name: Loading...</div>
+    <div class="player-name-display">
+        <form action="" class="container">
+            <input class="input-btn" type="radio" id="valueIs-1" name="valueIs-radio" checked="" value="valueIs-1">
+            <label class="neon-btn" for="valueIs-1">
+                <span class="span"></span>
+                <span class="txt">Hi, Player Name..</span>
+            </label>
+        </form>
+    </div>
 
     <div class="difficulty-buttons">
         <div class="button-wrapper">
@@ -24,7 +32,6 @@
             <a href="/HARD/hard.html"><button class="btn">Hard</button></a>
         </div>
     </div>
-</div>
 
 <script src="assets/JS/script.js"></script>
 </body>
