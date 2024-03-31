@@ -66,16 +66,22 @@ body {
 @media (max-width: 768px) {
     #board {
         width: 90%;
-        max-width: 400px; 
-        max-height: 400px; 
+        max-width: 400px;
+        max-height: 400px;
+        margin: auto; 
     }
     #board div {
-        width: 200px; 
-        height: 20vh;
+        width: 50%; 
+        height: 30vh; 
+        float: left; 
+        position: relative; 
+        padding-bottom: 10%; 
     }
 
     #board div img {
-        width: 55%;
-        height: 63%;
+        width: 45%; 
+        height: 54%; 
+        margin: auto; 
+        display: block; 
     }
 }
